@@ -1,0 +1,3 @@
+ register() {
+    console.log('cancelled');
+  }

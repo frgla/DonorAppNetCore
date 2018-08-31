@@ -4,12 +4,12 @@
 
     <ul *ngIf="loggedIn()" class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Početna</a>
+        <a class="nav-link" href="#">Novosti</a>
       </li>
     </ul>
 
     <div *ngIf="loggedIn()" class="dropdown" dropdown>
-      <a class="dropdown-toggle text-light" dropdownToggle>
+      <a class="dropdown-toggle text-dark" dropdownToggle>
         {{authService.decodedToken?.unique_name | titlecase}}
       </a>
 

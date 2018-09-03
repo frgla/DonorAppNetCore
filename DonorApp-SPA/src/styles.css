@@ -4,3 +4,12 @@
 @import '~font-awesome/css/font-awesome.min.css';
 @import '~alertifyjs/build/css/alertify.min.css';
 @import '~alertifyjs/build/css/themes/bootstrap.min.css';
+
+body {
+    position:absolute;
+    margin: 0px;
+    overflow: hidden;
+    top:0px;
+    bottom: 0px;
+    width: 100%;
+}

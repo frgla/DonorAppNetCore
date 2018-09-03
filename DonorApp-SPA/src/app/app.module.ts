@@ -17,6 +17,9 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import { appRoutes } from './routes';
 import { AuthGuard } from './_guards/auth.guard';
 
+export function tokenGetter() {
+    return localStorage.getItem('token');
+}
 
 @NgModule({
    declarations: [
@@ -25,7 +28,7 @@ import { AuthGuard } from './_guards/auth.guard';
       HomeComponent,
       RegisterComponent,
       NewsListComponent,
-      StatisticsComponent
+      StatisticsComponent,
    ],
    imports: [
       BrowserModule,
@@ -38,7 +41,7 @@ import { AuthGuard } from './_guards/auth.guard';
       AuthService,
       ErrorInterceptorProvider,
       AlertifyService,
-      AuthGuard
+      AuthGuard,
    ],
    bootstrap: [
       AppComponent

@@ -5,7 +5,7 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import { AuthGuard } from './_guards/auth.guard';
 
 export const appRoutes: Routes = [
-    {path: '', component: HomeComponent},
+    {path: 'pocetna', component: HomeComponent},
     {
         path: '',
         runGuardsAndResolvers: 'always',
@@ -13,7 +13,8 @@ export const appRoutes: Routes = [
         children: [
             {path: 'novosti', component: NewsListComponent},
             {path: 'statistika', component: StatisticsComponent},
-            {path: '**', redirectTo: '', pathMatch: 'full'}
+            // {path: 'profil', component: MemberEditComponent},
+            {path: '**', redirectTo: 'pocetna', pathMatch: 'full'}
         ]
     }
 ];

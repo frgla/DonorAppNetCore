@@ -35,7 +35,9 @@ namespace DonorApp.API.Controllers
 
             var userToCreate = new User
             {
-                Username = userForRegisterDto.Username
+                Username = userForRegisterDto.Username,
+                Email = userForRegisterDto.Email,
+                BloodGroup = userForRegisterDto.BloodGroup
             };
 
             var createdUser = await _repo.Register(userToCreate, userForRegisterDto.Password);

@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
     this.authService.register(this.model).subscribe(() => {
       this.alertify.success('Uspješna registracija');
     }, error => {
-      this.alertify.error('Korisnik već postoji');
+      this.alertify.error('Pogreška');
     });
   }
 

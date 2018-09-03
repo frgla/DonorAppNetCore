@@ -1,6 +1,5 @@
 <form #registerForm="ngForm" (ngSubmit)="register()">
   <h2 class="text-center text-danger">Registracija</h2>
-  <hr>
 
   <div class="form-group">
     <input type="text" class="form-control" required name="username" [(ngModel)]="model.username" placeholder="Korisnicko ime">
@@ -10,6 +9,23 @@
   <div class="form-group">
     <input type="password" class="form-control" required name="password" [(ngModel)]="model.password" placeholder="Lozinka">
   </div>
+
+  <div class="form-group">
+    <input type="email" class="form-control" required name="email" [(ngModel)]="model.email" placeholder="E-mail">
+  </div>
+
+  <div class="form-group">
+    <!--<input type="text" class="form-control" required name="bloodGroup" [(ngModel)]="model.bloodGroup" placeholder="Krvna grupa">-->
+    <select class="form-control" name="bloodGroup" [(ngModel)]="model.bloodGroup">
+        <option selected>Odaberite krvnu grupu...</option>
+        <option value="0">0</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+      </select>
+  </div>
+
 
   <div class="form-group text-center">
     <button class="btn btn-danger mr-2" type="submit">Registriraj</button>
